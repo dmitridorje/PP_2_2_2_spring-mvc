@@ -23,10 +23,7 @@ public class CarDAOImpl implements CarDAO {
     }
 
     @Override
-    public List<Car> getMyCars(int count) {
-        if (count < 1 || count > 5) {
-            return cars;
-        }
-        return cars.stream().limit(count).collect(Collectors.toList());
+    public List<Car> getMyCars() {
+        return cars;
     }
 }
